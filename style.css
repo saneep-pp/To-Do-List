@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(145deg,blue,green);
+    flex-direction: column;
+}
+.container{
+    width: 100%;
+    max-width: 420px;
+    background-color: aliceblue;
+    padding:20px;
+    border-radius: 10px;
+}
+h2{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 30px;
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+.title img{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+}
+.to-do-list-bar{
+width: 100%;
+height: 35px;
+background: linear-gradient(145deg,blue,green);
+border-radius: 20px;
+display: flex;
+justify-content: space-between;
+}
+input{
+    flex:1;
+    padding: 10px 20px;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.addbtn{
+    padding: 5px 20px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color:rgb(34, 157, 81);
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.4s;
+}
+.addbtn:hover {
+    background-color:#2d21cf; 
+    color: white;
+    transform: scale(1.2);
+  }
+
+ul{
+    padding: 10px;
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 5px 5px 35px;
+    position: relative;
+    cursor: pointer;
+
+}
+ul li::before{
+    content: "";
+    position:absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:50%;
+    left:0px;
+    transform: translate(50%,-50%);
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+    background-size: cover;
+    background-position: center;
+    top:50%;
+    left:0px;
+    transform: translate(50%,-50%);
+}
+span{
+    position: absolute;
+    font-size: 16px;
+    width:20px;
+    height: 20px;
+    top:50%;
+    right: 0;
+    line-height: 20px;
+    transform: translate(-50%,50%);
+    padding-left: 4.5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+span:hover{
+    background-color: red;
+}
